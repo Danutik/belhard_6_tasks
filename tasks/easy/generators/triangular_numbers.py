@@ -17,3 +17,18 @@ next(tn_gen) -> 10
 next(tn_gen) -> 15
 next(tn_gen) -> 21
 """
+
+
+def triangular_numbers():
+    current = 1
+    while True:
+        yield 1 / 2 * current * (current + 1)
+        current += 1
+
+
+numbers = triangular_numbers()
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))

@@ -9,3 +9,16 @@ next(even_gen) -> 2
 next(even_gen) -> 4
 next(even_gen) -> 6
 """
+
+
+def get_even_number():
+    result = 2
+    while True:
+        yield result
+        result += 2
+
+
+even_gen = get_even_number()
+print(next(even_gen))
+print(next(even_gen))
+print(next(even_gen))
